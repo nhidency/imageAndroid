@@ -1,0 +1,89 @@
+{% extends "pages/base.html" %}
+{% load static %}
+<link rel="stylesheet" href="{% static 'css/bill.css' %}">
+<script src = "{%static 'js/bill.js'%}" defer></script>
+{% block title %}
+Web bán hàng online
+{% endblock %}
+{% block main-content %}
+<body class = "bodyBill">
+    <div id="myModal" class="modal fade" role="dialog">
+        <div class="modal-dialog modal-lg">
+    
+        <!-- Modal content-->
+            <div class="modal-content">
+                <div class="modal-header">
+                    <button type="button" class="close" data-dismiss="modal">&times;</button>
+                    <h4 class="modal-title">Chi tiết đơn hàng</h4>
+                </div>
+                <div class="modal-body">
+                    <div class="title-product-bill">
+                        <span>STT</span>
+                        <span>Mã sản phẩm</span>
+                        <span>Tên sản phẩm</span>
+                        <span>Kích thước</span>
+                        <span>Giá</span>
+                        <span>Số lượng</span>
+                        <span>Tổng tiền</span>
+                    </div>
+                    <div class="detail-bill">
+                        <div class="item-product-bill">
+                            <span class = "stt">1</span>
+                            <span class = "idProductBill">HH000001</span>
+                            <span class = "nameProductBill">Giày thể thao</span>
+                            <span class = "sizeProductBill">35</span>
+                            <span class = "priceProductBill">280,000 VND</span>
+                            <span class = "quantityProductBill">1</span>
+                            <span class = "totalPriceProductBill">280.000 VND</span>
+                        </div>
+                        <div class="total-price-product-bill">
+                            <div class="col-title-total-price-product-bill">
+                                <span>Tổng cộng:</span>
+                                <span>Phí vận chuyển:</span>
+                                <span>Thành tiền:</span>
+                            </div>
+                            <div class="col-title-total-price-product-bill price1">
+                                <span>280.000 VND</span>
+                                <span>30.000 VND</span>
+                                <span>310.000 VND</span>
+                            </div>
+                            
+                        </div>
+                    </div>
+                </div>
+                <div class="modal-footer">
+                    <button type="button" class="btn btn-default" data-dismiss="modal">Close</button>
+                </div>
+            </div>
+    
+        </div>
+    </div>
+    <div class="rowBill rowBill1">
+        <img src="{% static 'images/bill.png' %}" alt="" class = "iconBill">
+        <h2>Đơn hàng của bạn</h2>
+    </div>
+    <div class="rowBill rowBill2">
+        <div class="status-bar">
+            <div class="status-item active Pending1" id = "Pending">Đang chờ xử lý<span>0</span></div>
+            <div class="status-item Processing1" id = "Processing">Đang xử lý<span>0</span></div>
+            <div class="status-item Shipped1" id = "Shipped">Đã gửi hàng<span>0</span></div>
+            <div class="status-item Out_for_Delivery1" id = "Out_for_Delivery">Đang giao hàng<span>0</span></div>
+            <div class="status-item successful_delivery1"  id = "successful_delivery">Giao thành công<span>0</span></div>
+            <div class="status-item Cancelled1" id = "Cancelled">Hủy đơn<span>0</span></div>
+        </div>
+    </div> 
+    <div class="rowBill rowBill3">
+        <div class="titleBill">
+            <span>Mã đơn hàng</span>
+            <span>Mã khách hàng</span>
+            <span>Tổng tiền</span>
+            <span>Số tiền đã trả</span>
+            <span>Ngày đặt</span>
+            <span>Xem chi tiết</span>
+        </div>
+        <div class="listBill">
+        </div>
+    </div> 
+</body>
+
+{% endblock main-content %}

@@ -1,0 +1,36 @@
+{% extends "pages/base.html" %}
+{% load static %}
+<link rel="stylesheet" href="{% static 'css/login.css' %}">
+<script src = "{%static 'js/login.js'%}" defer></script>
+{% block title %}
+Web bán hàng online
+{% endblock %}
+{% block main-content %}
+<body class = "bodyLogin">
+    <img class="bgLogin" src="{% static 'loginBG.jpg' %}" alt="S" style="width: 1465px; height: 600px; margin: 95px 5px 5px 5px; z-index: 0;">
+    <div class="login-box">
+        <i class="fa-regular fa-circle-xmark"></i>
+        <form id="loginForm"  action="">
+            <h2>Đăng nhập</h2>
+            <div class="input-box">
+                <span class="icon"><i class="fa-solid fa-user"></i></span>
+                <input type="username" name="username" required>
+                <label>Tên đăng nhập<span class="required">*</span></label>
+            </div>
+            <div class="input-box">
+                <span class="icon"><i class="fa-solid fa-lock"></i></span>
+                <input type="password" name="password" required>
+                <label class = "pwd">Mật khẩu<span class="required">*</span></label>
+            </div>
+            <div class="remember-forgot">
+                <a href="#">Quên mật khẩu</a>
+            </div>
+            <button class = "btnLogin" type = "submit">Đăng nhập</button>
+            <div class="register-link">
+                <p>Bạn chưa có tài khoản? <a href="{% url 'signup' %}">Đăng ký</a></p>
+            </div>
+        </form>
+    </div>
+</body>
+
+{% endblock main-content %}

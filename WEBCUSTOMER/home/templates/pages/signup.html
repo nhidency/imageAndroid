@@ -1,0 +1,53 @@
+{% extends "pages/base.html" %}
+{% load static %}
+<link rel="stylesheet" href="{% static 'css/signup.css' %}">
+<script src = "{%static 'js/signup.js'%}" defer></script>
+{% block title %}
+Web bán hàng online
+{% endblock %}
+{% block main-content %}
+<body class = "bodySignUp">
+    <img class="bgLogin" src="{% static 'loginBG.jpg' %}" alt="S" style="width: 1465px; height: 600px; margin: 95px 5px 5px 5px; z-index: 0;">
+    <div class="login-box">
+        <i class="fa-regular fa-circle-xmark"></i>
+        <form id="signupForm" action="">
+            <h2>Đăng Ký</h2>
+            <div class="input-box">
+                <span class="icon"><i class="fa-solid fa-user"></i></span>
+                <input type="text" name="userName" required>
+                <label>Họ tên<span class="required">*</span></label>
+            </div>
+            <div class="input-box">
+                <span class="icon"><i class="fa-solid fa-envelope"></i></span>
+                <input type="email" name="email" required>
+                <label>Email<span class="required" >*</span></label>
+            </div>
+            <div class="input-box">
+                <span class="icon"><i class="fa-solid fa-lock"></i></span>
+                <input type="password" name="password" required>
+                <label class = "pwd">Mật khẩu<span class="required">*</span></label>
+            </div>
+            <div class="input-box">
+                <span class="icon"><i class="fa-solid fa-phone"></i></span>
+                <input type="text" name="phoneNumber" required>
+                <label>Số điện thoại<span class="required">*</span></label>
+            </div>
+            <div class="input-box">
+                <span class="icon"><i class="fa-solid fa-user"></i></span>
+                <input type="text" name="gender" >
+                <label>Giới tính</label>
+            </div>
+            <div class="input-box">
+                <span class="icon"><i class="fa-solid fa-location-dot"></i></span>
+                <input type="text" name="address" >
+                <label>Địa chỉ</label>
+            </div>
+            <button class = "btnSignUp" type = "submit">Đăng ký</button>
+            <div class="register-link">
+                <p>Bạn đã có tài khoản? <a href="{% url 'login' %}">Đăng nhập</a></p>
+            </div>
+        </form>
+    </div>
+</body>
+
+{% endblock main-content %}

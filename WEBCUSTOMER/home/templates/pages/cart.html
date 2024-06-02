@@ -1,0 +1,62 @@
+{% extends "pages/base.html" %}
+{% load static %}
+<link rel="stylesheet" href="{% static 'css/cart.css' %}">
+<script src = "{%static 'js/cart.js'%}" defer></script>
+{% block title %}
+Web bán hàng online
+{% endblock %}
+{% block main-content %}
+<body class = "bodyCart">
+    <div class="colCart1">
+        <div class="rowCart1">
+            <img src="{% static 'images/cart.png' %}" alt="" class = "iconShoppingCart">
+            <h2>Giỏ hàng của bạn</h2>
+            <span class="price">Tổng cộng: <span></span> </span>
+        </div>
+        <div class="rowCart">
+            <div class="listShoppingCart">
+                
+            </div>
+        </div>
+    </div>
+    <div class="colCart2">
+        <span class="title">Thông tin nhận hàng</span>
+        <div class="rowCart2">
+            <label>Họ tên<span class="required">*</span></label>
+            <input id="userName" type="text" name="userName" required>
+        </div>
+        <div class="rowCart2">
+            <label>Số điện thoại<span class="required">*</span></label>
+            <input type="text" name="phoneNumber" required>
+        </div>
+        <div class="rowCart2">
+            <label>Địa chỉ<span class="required">*</span></label>
+            <input type="text" name="address" required>
+        </div>
+        <div class="rowCart2">
+            <label>Tỉnh thành<span class="required">*</span></label>
+            <select id="city">
+                <option value="" selected required>Chọn tỉnh thành</option>           
+            </select>
+        </div>
+        <div class="rowCart2">
+            <label>Quận huyện<span class="required">*</span></label>
+            <select id="district">
+                <option value="" selected required>Chọn quận huyện</option>
+            </select>
+        </div>
+        <div class="rowCart2">
+            <label>Phường xã<span class="required">*</span></label>
+            <select id="ward">
+                <option value="" selected required>Chọn phường xã</option>
+            </select>
+        </div>
+        <div class="rowCart2 End">
+            <button class="return">Quay về giỏ hàng</button>
+            <button class="order">Đặt hàng</button>
+        </div>
+    </div>
+    
+</body>
+
+{% endblock main-content %}

@@ -1,0 +1,89 @@
+{% extends "pages/base.html" %}
+{% load static %}
+<link rel="stylesheet" href="{% static 'css/itemproduct.css' %}">
+<script src = "{%static 'js/itemproduct.js'%}" defer></script>
+{% block title %}
+Web bán hàng online
+{% endblock %}
+{% block main-content %}
+<body class = "bodyItemProduct">
+    <div class="row-item-product1 intro-product-id">
+        <div class="col-item-product image">
+            <div class="image-large">
+                <img class="image-product1" src="{% static 'images/shoe/shoem1.jpg' %}" alt="">
+            </div>
+            <div class="list-image-small">
+                <img class="image-product1" src="{% static 'images/shoe/shoem2.jpg' %}" alt="">
+                <img class="image-product1" src="{% static 'images/shoe/shoem3.jpg' %}" alt="">
+                <img class="image-product1" src="{% static 'images/shoe/shoem4.jpg' %}" alt="">
+            </div>
+        </div>
+        <div class="col-item-product content">
+            <h1 class="content-title">Giày thể thao</h1>
+            <div class="content-solid">Đã bán <span>100 </span></div>
+            <div class="content-price">120,000 VND <span>150,000 VND</span></div>
+            <div class="content-size">
+                <div class="title-content-size">Kích cỡ: </div>
+                <div class="size-content-size">
+                    <div class="size-content-size-row1">
+                        <span>size 35</span>
+                        <span>size 36</span>
+                        <span>size 37</span>
+                    </div>
+                    <div class="size-content-size-row1">
+                        <span>size 38</span>
+                        <span>size 39</span>
+                        <span>size 40</span>
+                    </div>
+                </div>
+            </div>
+            <div class="content-quantity">
+                <div class="title-content-quantity">
+                    <span>Số lượng</span>
+                </div>
+                <div class="quantity-content-quantity">
+                    <span class="minus">-</span>
+                    <input class = "numberProduct" placeholder = "1">
+                    <span class = "idProduct" style="display: none;">${productInCart.idProd}</span>
+                    <span class="plus">+</span>
+                </div>
+                <div class="title-content-end">
+                    <span>100 </span>
+                    <span>sản phẩm có sẵn</span>
+                </div>
+            </div>
+            <div class="content-button">
+                <button class="content-button-add">Thêm vào giỏ</button>
+                <button class="content-button-purchase">Mua ngay</button>
+            </div>
+        </div>
+    </div>
+
+    <div class="row-item-product detail-product-id">
+        <div class="detail-product-id-title">CHI TIẾT SẢN PHẨM</div>
+        <div class="detail-product-id-content">
+            <div class="detail-product-id-content1">
+                <span class="title">Thương hiệu </span>
+                <span>XUXU </span>
+            </div>
+            <div class="detail-product-id-content1">
+                <span class="title">Xuất xứ </span>
+                <span>Trung Quốc </span>
+            </div>
+            <div class="detail-product-id-content1">
+                <span class="title">Gửi từ </span>
+                <span>Hà Nội </span>
+            </div>
+        </div>
+        <div class="detail-product-id-title">MÔ TẢ SẢN PHẨM</div>
+        <div class="detail-product-id-content2">
+        </div>
+    </div>
+
+    <div class="row-item-product other-product">
+        <div class="detail-product-id-title">CÁC SẢN PHẨM KHÁC</div>
+        <div class="other-product-list"></div>
+    </div>
+</body>
+
+{% endblock main-content %}

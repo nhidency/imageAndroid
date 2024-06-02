@@ -1,0 +1,75 @@
+{% extends "pages/base.html" %}
+{% load static %}
+<link rel="stylesheet" href="{% static 'css/product.css' %}">
+<script src = "{%static 'js/product.js'%}" defer></script>
+<script src = "{%static 'js/base.js'%}"></script>
+{% block title %}
+Web bán hàng online
+{% endblock %}
+{% block main-content %}
+<body class = "bodyProduct">
+    <div class="colProduct condition-search">
+        <h3>BỘ LỌC TÌM KIẾM</h3>
+        <h4 class="title-list-branch"> Thương hiệu</h4>
+        <div class="list-branch">
+            <div class="item-branch">
+                <input type="radio" name="brand" value="ADIDAS"> 
+                <label class="title-branch">ADIDAS</label>
+            </div>
+            <div class="item-branch">
+                <input type="radio" name="brand" value="TINDO"> 
+                <label class="title-branch">TINDO</label>
+            </div>
+            <div class="item-branch">
+                <input type="radio" name="brand" value="MINSU"> 
+                <label class="title-branch">MINSU</label>
+            </div>
+            <div class="item-branch">
+                <input type="radio" name="brand" value="TOMONI"> 
+                <label class="title-branch">TOMONI</label>
+            </div>
+            <div class="item-branch">
+                <input type="radio" name="brand" value="MUCHAO"> 
+                <label class="title-branch">MUCHAO</label>
+            </div>
+        </div>
+        <h4 class="title-list-type-shoe"> Loại giày dép</h4>
+        <div class="list-type-shoe">
+            <div class="item-type-shoe">
+                <input type="radio" name="options" value="Giay_the_thao"> 
+                <label class="title-type-shoe">Giày thể thao</label>
+            </div>
+            <div class="item-type-shoe">
+                <input type="radio" name="options" value="Giay_bup_be"> 
+                <label class="title-type-shoe">Giày búp bê</label>
+            </div>
+            <div class="item-type-shoe">
+                <input type="radio" name="options" value="Sandal"> 
+                <label class="title-type-shoe">SANDAL</label>
+            </div>
+            <div class="item-type-shoe">
+                <input type="radio" name="options" value="Dep_suc"> 
+                <label class="title-type-shoe">Dép sục</label>
+            </div>
+            <div class="item-type-shoe">
+                <input type="radio" name="options" value="Dep"> 
+                <label class="title-type-shoe">Dép</label>
+            </div>
+        </div>
+        <h4 class="title-list-price-shoe"> Khoảng giá</h4>
+        <div class="list-input-price">
+            <input type="number" name="price-start" placeholder="đ TỪ">
+            <span>-</span>
+            <input type="number" name="price-end" placeholder="đ ĐẾN">
+        </div>
+        <div class="list-button-filter">
+            <button class="execute-filter">Áp dụng</button>
+            <button class="execute-delete">Xóa tất cả</button>
+        </div>
+    </div>
+    <div class="colProduct list-product-search">
+    
+    </div>
+</body>
+
+{% endblock main-content %}

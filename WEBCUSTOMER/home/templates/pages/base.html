@@ -1,0 +1,220 @@
+{% load static %}
+<!DOCTYPE html>
+<html lang="en">
+<head>
+   <meta charset="UTF-8">
+   <meta name="viewport" content="width=device-width, initial-scale=1.0">
+   <meta http-equiv="X-UA-Compatible" content="ie=edge">  
+   <!-- css --> 
+   <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-QWTKZyjpPEjISv5WaRU9OFeRpok6YctnYmDr5pNlyT2bRjXh0JMhjY6hW+ALEwIH" crossorigin="anonymous">
+   <link href = "{%static 'css/bootstrap-reboot.css'%}" rel = "stylesheet"/>
+   <link href = "{%static 'css/bootstrap-reboot.css.map'%}" rel = "stylesheet"/>
+   <link href = "{%static 'css/bootstrap-reboot.min.css'%}" rel = "stylesheet"/>
+   <link href = "{%static 'css/bootstrap-reboot.min.css.map'%}" rel = "stylesheet"/>
+   <link href = "{%static 'css/bootstrap-reboot.rtl.css'%}" rel = "stylesheet"/>
+   <link href = "{%static 'css/bootstrap-reboot.rtl.css.map'%}" rel = "stylesheet"/>
+   <link href = "{%static 'css/bootstrap-reboot.rtl.min.css'%}" rel = "stylesheet"/>
+   <link href = "{%static 'css/bootstrap-reboot.rtl.min.css.map'%}" rel = "stylesheet"/>
+   <link href = "{%static 'css/bootstrap.css'%}" rel = "stylesheet"/>
+   <link href = "{%static 'css/bootstrap.css.map'%}" rel = "stylesheet"/>
+   <link href = "{%static 'css/bootstrap.min.css'%}" rel = "stylesheet"/>
+   <link href = "{%static 'css/bootstrap.min.css.map'%}" rel = "stylesheet"/>
+   <link href = "{%static 'css/main.css'%}" rel = "stylesheet"/>
+   <link href = "{%static 'css/login.css'%}" rel = "stylesheet"/>
+   <link href = "{%static 'css/signup.css'%}" rel = "stylesheet"/>
+   <link href = "{%static 'css/cart.css'%}" rel = "stylesheet"/>
+   <link href = "{%static 'css/bill.css'%}" rel = "stylesheet"/>
+   <link href = "{%static 'css/product.css'%}" rel = "stylesheet"/>
+   <link href = "{%static 'css/itemproduct.css'%}" rel = "stylesheet"/>
+   <link rel="stylesheet" href="{% static 'css/styles.css' %}">
+   <!-- Font Awesome -->
+   <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta2/css/all.min.css" rel="stylesheet">
+   <!-- Import SweetAlert library -->
+   <script src="https://cdn.jsdelivr.net/npm/sweetalert2@11.0.18/dist/sweetalert2.all.min.js"></script>
+   <script src="https://cdn.jsdelivr.net/npm/sweetalert2@11"></script>
+
+   <!-- js --> 
+   <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.6.1/jquery.min.js" integrity="sha512-aVKKRRi/Q/YV+4mjoKBsE4x3H+BkegoM/em46NNlCqNTmUYADjBbeNefNxYV7giUp0VxICtqdrbqU7iVaeZNXA==" crossorigin="anonymous" referrerpolicy="no-referrer"></script>
+   <script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.11.8/dist/umd/popper.min.js" integrity="sha384-I7E8VVD/ismYTF4hNIPjVp/Zjvgyol6VFvRkX/vR+Vc4jQkC+hVqc2pM8ODewa9r" crossorigin="anonymous"></script>
+   <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.min.js" integrity="sha384-0pUGZvbkm6XF6gxjEnlmuGrJXVbNuzT9qBBavbLwCsOGabYfZo0T0to5eqruptLy" crossorigin="anonymous"></script>
+   <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.min.js"></script>
+   {% comment %} <script src="{%static 'js/bootstrap.bundle.js'%}" > </script>
+   <script src="{%static 'js/bootstrap.bundle.js.map'%}" > </script>
+   <script src="{%static 'js/bootstrap.bundle.min.js'%}" > </script>
+   <script src="{%static 'js/bootstrap.bundle.min.js.map'%}" > </script>  {% endcomment %}
+   
+   <script src = "{%static 'js/base.js'%}" defer></script>
+   <script src = "{%static 'js/login.js'%}" defer></script>
+   <script src = "{%static 'js/signup.js'%}" defer></script>
+   <script src = "{%static 'js/cart.js'%}" defer></script>
+   <script src = "{%static 'js/bill.js'%}" defer></script>
+   <script src = "{%static 'js/product.js'%}" defer></script>
+   <script src = "{%static 'js/itemproduct.js'%}" defer></script>
+
+
+   <script src="https://cdnjs.cloudflare.com/ajax/libs/axios/0.21.1/axios.min.js"></script>
+   <title>{% block title %} {% endblock %}</title>
+</head>
+   
+<body>
+   <div class="overAll"></div>
+   <!--Header-->
+   <header>
+      <input type="checkbox" name="" id="toggler">
+      <label for="toggler" class="fa-solid fa-bars"></label>
+
+      <a href="#" class="logo"> SHOPIFEE <span>.</span></a>
+      <nav class="navbar">
+         <a href="/" class="navbar-title home active" id = "home-link">Trang chủ</a>
+         <a href="/product" class="navbar-title product" id = "product-link">Sản phẩm</a>
+         <a href="/bill" class="navbar-title bill" id = "bill-link">Đơn hàng</a>
+         <div class="input-group">
+            <div class="form-outline" data-mdb-input-init>
+               <input type="search" id="form1" class="form-control" placeholder="Tìm kiếm"  onmouseover="showSearchInput()" />
+               {% comment %} <label class="form-label" for="form1">Search</label> {% endcomment %}
+            </div>
+            {% comment %} <button type="button" class="btn btn-primary" onclick = "searchProductByNameInput()" data-mdb-ripple-init>
+               <i class="fas fa-search"></i>
+            </button> {% endcomment %}
+            <div class="list-search-input" >
+               
+            </div>
+         </div>
+      </nav>
+
+      <div class="icons">
+         <div class="icon-heart">
+            <i class="fa-solid fa-heart" ></i>
+            <span>0</span>
+         </div>
+         <div class="icon-cart">
+            <i class="fa-solid fa-cart-shopping" ></i>
+            <span>0</span>
+         </div>
+         <div class="icon-user">
+            <a href=""class="fa-solid fa-user" ></a>
+            <span>0</span>
+         </div>
+         <button class = "buttonLogin">Đăng nhập</button>
+         <button class="buttonLogout" style="display: none;">Đăng xuất</button>
+      </div>
+   </header>
+
+   <!--chatbot-->
+   <div>
+      <button class="chatbot-toggler">
+         <img class="material-symbols-outlined" src="{% static 'images/logochatbot.png' %}"  alt="S"/>
+      </button>
+      <div class="chatbot">
+         <header>
+            <span class = "expand-btn">
+               <i class="fa-solid fa-expand"></i>
+            </span>
+            <h2>Chat cùng Maris</h2>
+            <span href="" class="close-btn">
+               <i class="fa-solid fa-xmark"></i>
+            </span>
+         </header>
+         <ul class="chatbox">
+            <li class="chat incoming">
+               <div class="date-divider"></div>
+               <div class="message-container">
+                  <span class="material-symbols-outlined">
+                     <img src="/static/images/iconchat.png" width="50" height="50">
+                  </span>
+                  <div class="box-container"> 
+                     <div class="box">
+                        <span class="discount">-10%</span> <!-- Giả sử mức giảm giá cố định -->
+                           <div class="image">
+                              <img src="/static/images/iconchat.png" alt="${product.productName}">
+                              <div class="icons">
+                              <a class="fa-solid fa-heart"></a>
+                              <a class="cart-btn">Thêm vào giỏ</a>
+                              <a class="fa-solid fa-share"></a>
+                              <span class = "idProduct" style="display: none;">HH000001</span>
+                              <span class = "discountedPrice" style="display: none;">100,000 vnd</span>
+                           </div>
+                           <div class="content">
+                              <h3>giày cao gót</h3>
+                              <div class="price">100,000 vnd <span>150,000 vnd</span></div>
+                           </div>
+                     </div>
+   
+                     <div class="box">
+                        <span class="discount">-10%</span> <!-- Giả sử mức giảm giá cố định -->
+                           <div class="image">
+                              <img src="/static/images/iconchat.png" alt="${product.productName}">
+                              <div class="icons">
+                              <a class="fa-solid fa-heart"></a>
+                              <a class="cart-btn">Thêm vào giỏ</a>
+                              <a class="fa-solid fa-share"></a>
+                              <span class = "idProduct" style="display: none;">HH000001</span>
+                              <span class = "discountedPrice" style="display: none;">100,000 vnd</span>
+                           </div>
+                           <div class="content">
+                              <h3>giày cao gót</h3>
+                              <div class="price">100,000 vnd <span>150,000 vnd</span></div>
+                           </div>
+                     </div>
+                  </div>
+               
+
+               </div>
+               <span class="timestamp">11:00 AM</span>
+            </li>
+         </ul>
+         <ul class="list"></ul>
+         <div class="chat-input">  
+            <textarea placeholder="Enter a message..." required ></textarea>
+            <span id="send-btn" class="material-symbols-outlined" href="" >
+               <i href="" class="fa-solid fa-paper-plane"></i>
+            </span>
+         </div>
+      </div>
+   </div>
+
+   <!--shopping cart-->
+   <section class="" id="shoppingCart">
+      <div class="cartTab">
+         <i class="fa-regular fa-circle-xmark"></i>
+         <h1>Giỏ hàng</h1>
+         <div class="allCheckBox">
+            <input type="checkbox" id="allCheckbox" name="allCheckbox" class="item-allcheckbox">
+            <span>Chọn tất cả</span>
+         </div>
+         <i class="fa-solid fa-trash"></i>
+         <div class="listCart">
+         </div>
+         <div class="btn">
+            <button class="checkOut">CHECK OUT</button>
+         </div>
+      </div>
+   </section>
+   
+   <!-- product like-->
+   <section class="" id="productLike">
+      <div class="productLikeTab">
+         <i class="fa-regular fa-circle-xmark"></i>
+         <h1>Sản phẩm yêu thích</h1>
+         <div class="allCheckBoxPL">
+            <input type="checkbox" id="allCheckboxLike" name="allCheckboxLike" class="item-allcheckboxLike">
+            <span>Chọn tất cả</span>
+         </div>
+         <i class="fa-solid fa-trash"></i>
+         <div class="listProductLike">
+         </div>
+         <div class="btn">
+            <button class="checkOut">Mua ngay</button>
+         </div>
+      </div>
+   </section>
+
+   <!-- main body-->
+   {% block banner_slider %} {% endblock%}
+   {% block main-content%} {% endblock main-content%}
+   {% block cart_content %} {% endblock cart_content %}
+   {% block content_checkout %} {% endblock content_checkout %}
+
+
+</body>
+</html>

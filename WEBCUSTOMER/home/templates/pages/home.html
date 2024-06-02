@@ -1,0 +1,313 @@
+{% extends "pages/base.html" %}
+{% load static %}
+{% block banner_slider%}
+<link rel="stylesheet" href="{% static 'css/styles.css' %}">
+<script src = "{%static 'js/home.js'%}" defer></script>
+{% endblock banner_slider%}
+{% block title %}
+Web bán hàng online
+{% endblock %}
+{% block main-content %}
+
+<body>
+    <!--slider-->
+    <div class="slider">
+        <div class="list-slider">
+            <div class="item-slider">
+                <img src="{% static 'images/banner/bn1.png' %}" alt="">
+            </div>
+            <div class="item-slider">
+                <img src="{% static 'images/banner/b2.webp' %}" alt="">
+            </div>
+            <div class="item-slider">
+                <img src="{% static 'images/banner/bn1.png' %}" alt="">
+            </div>
+        </div>
+        {% comment %} button prev and next {% endcomment %}
+        <div class="buttons">
+            <button id="prev"><</button>
+            <button id="next">></button>
+        </div>
+        {% comment %} dots {% endcomment %}
+        <ul class="dots">
+            <li class="active" ></li>
+            <li></li>
+            <li></li>
+        </ul>
+        
+    </div>
+
+     <!-- icon container-->
+     <section class="icons-container">
+        <div class="icons">
+            <i class="fa-solid fa-truck-fast circle-icon1" ></i>
+            <div class="info">
+                <h3>Giao hàng nhanh, miễn phí</h3>
+                <span>Đơn hàng > 200k được giao hàng miễn phí</span>
+            </div>
+        </div>
+        <div class="icons">
+            <i class="fa-solid fa-hand-holding-dollar circle-icon2"></i>
+            <div class="info">
+                <h3>Trả hàng, bảo hành</h3>
+                <span>Hoàn trả trong vòng 10 ngày</span>
+            </div>
+        </div>
+        <div class="icons">
+            <i class="fa-solid fa-gift circle-icon3"></i>
+            <div class="info">
+                <h3>Ưu đãi và quà tặng</h3>
+                <span>Có nhiều ưu đãi và quà tặng khủng</span>
+            </div>
+        </div>
+        {% comment %} <div class="icons">
+            <i class="fa-regular fa-credit-card circle-icon4"></i>
+            <div class="info">
+                <h3>secure paymens</h3>
+                <span>protected by paypal</span>
+            </div>
+        </div> {% endcomment %}
+    </section>
+    <!--about section starts-->
+    <section class="about" id="about">
+        <h1 class="heading"><span> Gới </span> thiệu</h1>
+        <div class="row">
+            <div class="video-container">
+                <video src="{%static 'images/video.mp4'%}" loop autoplay muted></video>
+                <h3>Best shoes sellers</h3>
+            </div>
+            <div class="content">
+                <h3>Tại sao nên chọn mua sản phẩm của chúng tôi?</h3>
+                <p>Định hướng và Phương châm mà SHOPIFEE hướng tới là vẻ đẹp thanh lịch và năng động cho phái nữ, phù hợp với cả phong cách vừa hiện đại vừa cổ điển với những mục tiêu cụ thể, thiết thực.</p>
+                <p>Màu sắc trẻ trung, đa dạng, dễ phối nhiều kiểu quần áo khác nhau. Kiểu dáng đơn giản, trang nhã, họa tiết tinh tế tạo sự thanh lịch, sang trọng, bắt kịp với xu thế thời trang mới nhất.</p>
+                <a href="#" class="btn">learn more</a>
+            </div>
+        </div>
+    </section>
+
+
+    <!-- best seller-->
+    <div class = "container1">
+        <img src="{% static 'images/sale/fsale.webp' %}" class="sale-image">
+        <h5> Kết thúc sau </h5>
+        <div class="countdownLoop" id="countdown">
+            <span class="days">
+                <p class="d"></p>
+                <p class="title">Ngày</p>
+            </span>
+            <span class="hours">
+                <p class="h"></p>
+                <p class="title">Giờ</p>
+            </span>
+            <span class="minutes">
+                <p class="m"></p>
+                <p class="title">Phút</p>
+            </span>
+            <span class="seconds">
+                <p class="s"></p>
+                <p class="title">Giây</p>
+            </span>
+        </div>
+        <section class = "content">
+            <div class = "product">
+                <div class="product_list">
+                    <div class="product_item ">
+                        <div class="discount-code"><span>-10%</span></div>
+                        <a class="like_product" href="">
+                            <i class="fa-regular fa-heart"></i>
+                        </a>
+                        <img src="{% static 'images/shoe/s7.webp' %}" width="100%" height="300px">
+                        <div class="product-detail">
+                            <h3> Giày cổ cao xanh lơ </h3>
+                            <div class="price">320,000 VND</div>
+                            <span>288,000 VND</span>
+                            <button class="btn-product-detail btnn"> Thêm vào giỏ hàng </button>
+                        </div>
+                    </div>
+
+                    <div class="product_item ">
+                        <div class="discount-code"><span>-50%</span></div>
+                        <a class="like_product" href="">
+                            <i class="fa-regular fa-heart"></i>
+                        </a>
+                        <img src="{% static 'images/shoe/s4.webp' %}" width="100%" height="300px">
+                        <div class="product-detail">
+                            <h3> Giày thể thao  </h3>
+                            <div class="price">220,000 VND</div>
+                            <span>110,000 VND</span>
+                            <button class="btn-product-detail btnn"> Thêm vào giỏ hàng </button>
+                        </div>
+                    </div>
+
+                    <div class="product_item ">
+                        <div class="discount-code"><span>-20%</span></div>
+                        <a class="like_product" href="">
+                            <i class="fa-regular fa-heart"></i>
+                        </a>
+                        <img src="{% static 'images/shoe/s5.webp' %}" width="100%" height="300px">
+                        <div class="product-detail">
+                            <h3> Giày cổ cao xanh </h3>
+                            <div class="price">320,000 VND</div>
+                            <span>272,000 VND</span>
+                            <button class="btn-product-detail btnn"> Thêm vào giỏ hàng </button>
+                        </div>
+                    </div>
+
+                    <div class="product_item ">
+                        <div class="discount-code"><span>-15%</span></div>
+                        <a class="like_product" href="">
+                            <i class="fa-regular fa-heart"></i>
+                        </a>
+                        <img src="{% static 'images/shoe/s1.webp' %}" width="100%" height="300px">
+                        <div class="product-detail">
+                            <h3> Giày cổ cao trắng </h3>
+                            <div class="price">320,000 VND</div>
+                            <span>298,667 VND</span>
+                            <button class="btn-product-detail btnn"> Thêm vào giỏ hàng </button>
+                        </div>
+                    </div>
+
+                </div>
+                
+
+            </div>
+        </section>
+    </div>
+
+    <!-- brand section-->
+    {% comment %} <section class="brands">
+        <h1 class="heading"><span> Thương </span> hiệu </h1>
+        <div class="box-container">
+            <div class="box">
+                <div class="image">
+                    <img src="{% static 'images/shoe/s7.webp' %}" alt="">
+                </div>
+            </div>
+            <div class="box">
+                <div class="image">
+                    <img src="{% static 'images/shoe/s7.webp' %}" alt="">
+                </div>
+            </div>
+            <div class="box">
+                <div class="image">
+                    <img src="{% static 'images/shoe/s7.webp' %}" alt="">
+                </div>
+            </div>
+            <div class="box">
+                <div class="image">
+                    <img src="{% static 'images/shoe/s7.webp' %}" alt="">
+                </div>
+            </div>
+            <div class="box">
+                <div class="image">
+                    <img src="{% static 'images/shoe/s7.webp' %}" alt="">
+                </div>
+            </div>
+        </div>
+    </section> {% endcomment %}
+
+    <!--product section -->
+    <section class="products" id="Products">
+        <h1 class="heading">Sản phẩm <span>mới nhất</span></h1>
+        <div class="box-container"> 
+            <div class="box">
+                <span class="discount">-10%</span>
+                <div class="image"> 
+                    <img class="image-product1" src="{% static 'images/shoe/s7.webp' %}" alt="">
+                    <div class="icons">
+                        <a class="fa-solid fa-heart"></a>
+                        <a class="cart-btn"> add to cart</a>
+                        <a class="fa-solid fa-share"></a>
+                        <span class = "idProduct" style="display: none;"></span>
+                    </div>
+                </div>
+                <div class="content">
+                    <h3>giày thể thao</h3>
+                    <div class="price">$12.99 <span>$15.99</span></div>
+                </div>
+            </div>
+            
+        </div>
+    </section>
+
+</body>
+
+
+{% comment %} <div class="row">
+
+    <h3 style="text-align: center;"><strong>Sản phẩm nổi bật</strong></h3>
+
+    <div class = "col-lg-3">
+        <img class="thumbnail" src="{% static 'images/shoe/s2.webp' %}">
+        <div class="box-element product">
+            <h6><strong> Sản phẩm </strong></h6>
+            <hr>
+
+            <button class="btn btn-outline-secondary add-btn"> Thêm vào giỏ hàng</button>
+            <a class="btn btn-outline-success" href="#">Xem</a>
+            <h5 style="display: inline-block; float: right"><strong> 200.000 VND </strong></h5>
+        </div>
+    </div>
+    <div class = "col-lg-3">
+        <img class="thumbnail" src="{% static 'images/shoe/s2.webp' %}">
+        <div class="box-element product">
+            <h6><strong> Sản phẩm </strong></h6>
+            <hr>
+
+            <button class="btn btn-outline-secondary add-btn"> Thêm vào giỏ hàng</button>
+            <a class="btn btn-outline-success" href="#">Xem</a>
+            <h5 style="display: inline-block; float: right"><strong> 200.000 VND </strong></h5>
+        </div>
+    </div>
+</div> {% endcomment %}
+
+
+<br/> <br/> <br/>
+ <!-- footer -->
+<footer>
+    <div class="row">
+        <div class="col">
+            <img src="{% static 'images/logo.png' %}" alt="" class = "logo-footer">
+            <p> SHOPIFEE luôn cam kết, đảm bảo đưa sản phẩm</p>
+            <p> trực tiếp từ nhà sản xuất đến tay người dùng và</p>
+            <p> kiểm soát được chất lượng để đáp ứng được nhu</p>
+            <p> cầu ngày càng cao của khách hàng. </p>
+            
+        </div>
+        <div class="col">
+            <h3>Office <div class="underline"><span></span></div></h3>
+            <p>ITPL Road</p>
+            <p>Whitefield, Bangalore </p>
+            <p>Karmataka, PIN 560066</p>
+            <p class="email-id">nhi@gmail.com</p>
+        
+        </div>
+        {% comment %} <div class="col">
+            <h3>Links<div class="underline"><span></span></div></h3>
+            <ul>
+                <li><a href="">Home</a></li>
+                <li><a href="">Services</a></li>
+                <li><a href="">About Us</a></li>
+                <li><a href="">Features</a></li>
+                <li><a href="">Contacts</a></li>
+            </ul>
+        </div> {% endcomment %}
+        <div class="col">
+            <h3>Newsletter<div class="underline"><span></span></div></h3>
+            <form>
+                <i class="fa-regular fa-envelope"></i>
+                <input class="input-email" type="email" placeholder="Enter your email id" required>
+                <button type="submit"> <i class="fa-solid fa-arrow-right"></i></button>
+            </form>
+            <div class="social-icons">
+                <i class="fa-brands fa-facebook-f"></i>
+                <i class="fa-brands fa-twitter"></i>
+                <i class="fa-brands fa-whatsapp"></i>
+                <i class="fa-brands fa-pinterest"></i>
+            </div>
+        </div>
+    </div>
+    <hr>
+    <p class="copyright"> © 2024 - Bản quyền thuộc về F1GENZ TECHNOLOGY CO., LTD. Cung cấp bởi Nguyen Nhi</p>
+</footer>
+{% endblock main-content %}
