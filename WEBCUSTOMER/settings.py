@@ -27,7 +27,7 @@ SECRET_KEY = 'django-insecure-utkhrhnel9abjo+oc+sl@e#vu9y_l4s*lge%3$(mm7o#w5k)sn
 DEBUG = True
 
 
-ALLOWED_HOSTS = ['0b26-42-114-127-243.ngrok-free.app']
+ALLOWED_HOSTS = ['*']
 
 
 
@@ -51,6 +51,7 @@ MIDDLEWARE = [
     'django.contrib.auth.middleware.AuthenticationMiddleware',
     'django.contrib.messages.middleware.MessageMiddleware',
     'django.middleware.clickjacking.XFrameOptionsMiddleware',
+    "whitenoise.middleware.WhiteNoiseMiddleware", 
 ]
 
 ROOT_URLCONF = 'WEBCUSTOMER.urls'
@@ -123,6 +124,11 @@ STATIC_URL = 'static/'
 STATICFILES_DIRS = [
     os.path.join(BASE_DIR, "static"),
 ]
+
+
+STATIC_ROOT = os.path.join(BASE_DIR, 'staticfiles')
+
+STATICFILES_STORAGE = 'whitenoise.storage.CompressedManifestStaticFilesStorage'
 
 
 # Default primary key field type

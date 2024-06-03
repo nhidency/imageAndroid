@@ -1,0 +1,147 @@
+/* Fonts Form Google Font ::- https://fonts.google.com/  -:: */
+@import url('https://fonts.googleapis.com/css?family=Abel|Abril+Fatface|Alegreya|Arima+Madurai|Dancing+Script|Dosis|Merriweather|Oleo+Script|Overlock|PT+Serif|Pacifico|Playball|Playfair+Display|Share|Unica+One|Vibur');
+/* End Fonts */
+/* Start Global rules */
+* {
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+    font-family: Verdana, Geneva, Tahoma, sans-serif;
+}
+:root{
+    --yellow:#ffa200;
+}
+.bodySignUp{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    min-height: 100vh;
+}
+
+.login-box{
+    position: relative;
+    background: rgb(127, 175, 217);
+    border-radius: 20px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    z-index: 99;
+}
+
+.login-box .fa-circle-xmark{
+    position: absolute;
+    font-size: 25px;
+    color: white;
+    border-radius: 50%;
+    top: 10px;
+    right: 10px;
+}
+
+.login-box .fa-circle-xmark:hover{
+    background-color: red;
+}
+
+.bodySignUp .login-box{
+    width: 500px;
+    height: 700px;
+}
+
+.login-box h2{
+    font-size: 3em;
+    color: #fff;
+    text-align: center;
+}
+
+.input-box{
+    position: relative;
+    margin: 30px 0;
+    border-bottom: 2px solid #fff;
+}
+.bodySignUp .login-box .input-box {
+    width: 410px;
+}
+.input-box label{
+    position: absolute;
+    top: 50%;
+    left: 5px;
+    transform: translateY(-50%);
+    font-size: 1.5em;
+    color: #fff;
+    pointer-events: none;
+    transition: .5s;
+}
+
+.bodySignUp .login-box .input-box input:focus~label,
+.bodySignUp .login-box .input-box input:valid~label,
+.bodySignUp .login-box .input-box input:invalid~label{
+    top: -5px;
+}
+
+.input-box input{
+    width: 100%;
+    height: 50px;
+    background: transparent;
+    border: none;
+    outline: none;
+    font-size: 1.5em;
+    color: #fff;
+    padding: 0 35px 0 5px;
+}
+
+.input-box .icon{
+    position: absolute;
+    right: 8px;
+    color: #fff;
+    font-size: 1.5rem;
+    line-height: 57px;
+}
+
+.remember-forgot{
+    margin: -15px 0 15px;
+    font-size: 1.2em;
+    color: #fff;
+    text-align: right;
+    /* justify-content: space-between; */
+}
+
+
+.btnSignUp{
+    width: 100%;
+    height: 40px;
+    background: #f6b9e7;
+    border: none;
+    outline: none;
+    border-radius: 40px;
+    cursor: pointer;
+    font-size: 1.5em;
+    color: #000000;
+    font-weight: 500;
+    margin-top: 5px;
+}
+
+.btnSignUp:hover{
+    background: var(--yellow);
+}
+
+.register-link{
+    font-size: 1.2em;
+    color: #fff;
+    text-align: center;
+    margin: 25px 0 10px;
+}
+
+.register-link p a{
+    color: #e44a20;
+    text-decoration: none;
+    font-weight: 600;
+}
+
+.register-link p a:hover{
+    text-decoration: underline;
+}
+
+.bodySignUp .login-box .input-box .required {
+    color: red; /* Đặt màu đỏ cho kí hiệu sao để chỉ ra rằng đây là trường bắt buộc */
+    margin-left: 5px; /* Tạo khoảng cách nhỏ giữa nhãn và kí hiệu */
+}
+

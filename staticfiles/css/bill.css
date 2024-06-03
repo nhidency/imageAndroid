@@ -1,0 +1,264 @@
+:root{
+    --yellow:#ffa200;
+}
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: Verdana, Geneva, Tahoma, sans-serif;
+    outline: none;
+    border: none;
+    text-decoration: none;
+    transition: .2s linear;
+}
+
+.bodyBill{
+    display: grid;
+    grid-template-rows: 50px 1fr;
+    margin: 60px 40px auto 80px;
+}
+
+.bodyBill .iconBill{
+    height: 80px;
+    width: 80px;
+}
+
+.bodyBill .rowBill1{
+    display: grid;
+    grid-template-columns: 150px 200px 1fr;
+}
+
+.bodyBill .rowBill1 h2{
+    align-items: center;
+    justify-content: center;
+    display: grid;
+    margin-left: -150px;
+}
+
+.bodyBill .rowBill1 .price{
+    display: grid;
+    justify-content: center;
+    align-items: center;
+    font-size: 18px;
+    margin-top: 20px;
+    font-weight: bold;
+
+}
+
+.status-bar {
+    display: flex;
+    
+}
+
+.status-item {
+padding: 10px 20px;
+cursor: pointer;
+margin-right: 50px;
+font-size: 16px;
+border-bottom: 2px solid transparent; /* Đường gạch chân mặc định */
+}
+
+.status-item.active {
+border-bottom: 2px solid var(--yellow);
+}
+
+/* Loại bỏ khoảng cách cho phần tử cuối cùng */
+.status-item:last-child {
+    margin-right: 0;
+}
+
+.status-item span{
+    color: #fff;
+    background-color: red;
+    border-radius: 50%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin-top: -28px;
+    margin-left: -22px;
+    height: 22px;
+    width: 22px;
+    display: none;
+    font-size: 12px;
+    padding: 2px 2px 2px 4px;
+}
+
+.rowBill2 {
+    display: flex;
+    flex-direction: column;
+}
+
+.listBill {
+    border: 1px solid #ccc; 
+    border-collapse: collapse;
+    margin-bottom: 20px; 
+    width: 1370px;
+    font-size: 14px;
+    margin-top: 15px;
+}
+
+.titleBill{
+    display: grid;
+    grid-template-columns: repeat(6, 228px); 
+    background-color: #f0f0f0;
+    font-weight: bold;
+    padding: 10px; 
+    border: 1px solid #ccc; 
+    border-collapse: collapse; 
+    margin-top: 20px;
+    width: 1370px;
+    font-size: 14px;
+    margin-top: 15px;
+}
+
+.titleBill span{
+    text-align: center;
+} 
+
+.show-detail-bill{
+    background-color: aquamarine;
+    width: 1500px;
+    height: 100px;
+    z-index: 1200px;
+}
+
+.item-bill .over-view-bill{
+    display: grid;
+    grid-template-columns: repeat(6, 228px); /* 5 cột trong bảng */
+    margin-left: -10px;
+    text-align: center;
+    padding: 10px;
+    border: 1px solid #f0f0f0;
+}
+
+.item-bill .over-view-bill .fa-trash{
+    font-size: 25px;
+    color: red;
+    margin-left: 20px;
+}
+
+.item-bill .over-view-bill .fa-eye{
+    font-size: 25px;
+    color: rgb(51, 142, 226);
+}
+
+.item-bill .over-view-bill .fa-eye:hover{
+    color: rgb(35, 92, 145);
+}
+
+.title-product-bill, .item-product-bill{
+    display: grid;
+    grid-template-columns: 15px 200px 250px 90px 150px 90px 1fr;
+    padding: 10px;
+    gap: 5px;
+    text-align: center;
+    font-size: 14px;
+}
+
+.item-bill{
+    cursor: pointer;
+}
+/* 
+.item-bill:hover{
+    background-color: #efd2a0;
+} */
+
+.title-product-bill{
+    background-color: #f0f0f0;
+    font-weight: bold;
+    padding: 10px; 
+    border: 1px solid #ccc; 
+    border-collapse: collapse; 
+    
+}
+
+.title-product-bill span {
+    justify-self: center; /* Căn giữa theo chiều ngang */
+    align-self: center; /* Căn giữa theo chiều dọc */
+
+}
+
+.item-product-bill .totalPriceProductBill{
+    text-align: right;
+    margin-right: 20px;
+    font-size: 14px;
+}
+
+.total-price-product-bill{
+    margin-top: 20px;
+    display: grid;
+    grid-template-columns: 800px 1fr;
+}
+
+.total-price-product-bill .title{
+    margin-left: 300px;
+    text-align: right;
+}
+
+.col-title-total-price-product-bill{
+    display: grid;
+    grid-template-rows: repeat(3, 1fr);
+    text-align: right;
+    margin-right: 20px;
+    font-size: 1.5rem;
+}
+
+.col-title-total-price-product-bill span{
+    margin: 5px;
+}
+
+/* Đảm bảo modal rộng hơn */
+.modal-lg {
+    max-width: 70%; /* Đặt chiều rộng tối đa của modal */
+    margin: 0 auto; /* Đảm bảo modal được căn giữa màn hình */
+    height: auto;
+}
+
+/* Đảm bảo modal vẫn được căn giữa màn hình */
+.modal {
+    text-align: center; /* Căn giữa các phần tử trong modal */
+}
+
+.modal-title{
+    font-size: 20px;
+}
+
+/* Đảm bảo nút close ở phía trên cùng bên phải của modal */
+.close {
+    position: absolute;
+    top: 10px;
+    right: 15px;
+    font-size: 15px;
+    width: 25px;
+    height: 25px;
+    border-radius: 50%;
+    background: rgb(248, 146, 146);
+}
+
+.close:hover {
+    position: absolute;
+    top: 10px;
+    right: 15px;
+    font-size: 15px;
+    background: red;
+    width: 25px;
+    height: 25px;
+    border-radius: 50%;
+}
+
+
+.modal-footer button{
+    background-color: #2f6543;
+    color: #fff;
+    font-size: 15px;
+    padding: 12px;
+    border-radius: 10px;
+}
+
+.modal-footer button:hover{
+    background-color: rgb(43, 136, 43);
+    color: #fff;
+    font-size: 15px;
+    padding: 12px;
+    border-radius: 10px;
+}
