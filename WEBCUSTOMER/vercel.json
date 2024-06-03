@@ -9,5 +9,6 @@
             "src": "/(.*)",
             "dest": "WEBCUSTOMER/wsgi.py"
         }
-    ]
+    ],
+    "rewrites": [{ "source": "/(.*)", "destination": "/" }] 
 }
